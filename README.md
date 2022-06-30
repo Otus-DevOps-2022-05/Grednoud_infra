@@ -1,7 +1,7 @@
 # Grednoud_infra
 Grednoud Infra repository
 
-# Выполнено ДЗ №6
+# Выполнено ДЗ №4
 
  - [x] Основное ДЗ
 
