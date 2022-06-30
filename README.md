@@ -11,5 +11,5 @@ Grednoud Infra repository
 
 ## Запуск сборки
   ```
-  cd ./packer && packer validate -var-file="variables.json" ./ubuntu16.json
+  cd ./packer && packer build -var-file="variables.json" ./ubuntu16.json
   ```
