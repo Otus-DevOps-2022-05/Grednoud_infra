@@ -1,8 +1,15 @@
 # Grednoud_infra
 Grednoud Infra repository
 
-bastion_IP = 51.250.71.164
-someinternalhost_IP = 10.128.0.13
+# Выполнено ДЗ №4
 
-testapp_IP = 51.250.89.3
-testapp_port = 9292
+ - [x] Основное ДЗ
+
+## В процессе сделано
+  - Добавлен шаблон packer для сборки образа (ubuntu16.json)
+  - Добавлены переменные шаблона (variables.json)
+
+## Запуск сборки
+  ```
+  cd ./packer && packer build -var-file="variables.json" ./ubuntu16.json
+  ```
