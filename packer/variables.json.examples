@@ -1,6 +1,0 @@
-{
-    "folder_id": "changeme",
-    "image_family": "ubuntu-1604-lts",
-    "key_file": "key.json",
-    "ssh_username": "ubuntu"
-}
