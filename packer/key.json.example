@@ -1,8 +1,0 @@
-{
-   "id": "********",
-   "service_account_id": "******",
-   "created_at": "2022-06-29T11:19:21.960664525Z",
-   "key_algorithm": "RSA_2048",
-   "public_key": "******",
-   "private_key": "*******"
-}
