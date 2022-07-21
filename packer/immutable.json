@@ -2,7 +2,8 @@
     "variables": {
         "mv_service_account_key_file": "",
         "mv_folder_id": "",
-        "mv_source_image_family": ""
+        "mv_source_image_family": "",
+        "mv_image_family": ""
     },
     "builders": [
         {
@@ -10,8 +11,8 @@
             "service_account_key_file": "{{user `mv_service_account_key_file`}}",
             "folder_id": "{{user `mv_folder_id`}}",
             "source_image_family": "{{user `mv_source_image_family`}}",
-            "image_name": "reddit-base-{{timestamp}}",
-            "image_family": "reddit-base",
+            "image_name": "{{user `mv_image_family`}}-{{timestamp}}",
+            "image_family": "{{user `mv_image_family`}}",
             "ssh_username": "ubuntu",
             "platform_id": "standard-v1",
             "use_ipv4_nat": "true"
@@ -31,6 +32,16 @@
         {
             "type": "shell",
             "script": "scripts/install_mongodb.sh",
+            "execute_command": "sudo {{.Path}}"
+        },
+        {
+            "type": "file",
+            "source": "files/reddit-app.service",
+            "destination": "/tmp/reddit-app.service"
+        },
+        {
+            "type": "shell",
+            "script": "files/install_app.sh",
             "execute_command": "sudo {{.Path}}"
         },
         {
