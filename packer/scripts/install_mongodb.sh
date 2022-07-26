@@ -1,12 +1,6 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
-echo "########### Update Packages"
-apt-get update -y
-echo "########### Install mongodb"
 apt-get install -y mongodb
-echo "########### Start mongod"
-systemctl start mongodb
-echo "########### Enable mongod"
-systemctl enable mongodb
 
-exit 0
+systemctl enable mongodb
+systemctl start mongodb

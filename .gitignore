@@ -1,9 +1,9 @@
-key.json
-variables.json
-
-# terraform
 *.tfstate
 *.tfstate.*.backup
 *.tfstate.backup
 *.tfvars
+*.tfbackend
 .terraform/
+terraform-key.json
+packer-key.json
+.terraform.lock.hcl
